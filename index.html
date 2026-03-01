@@ -1310,6 +1310,39 @@
     .exp-item::before { display: none; }
     .exp-content { padding-left: 0; }
   }
+  .sample-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.sample-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+.sample-btn:hover {
+  opacity: 0.75;
+}
+
+.sample-btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+.amalitech-preview {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
 </style>
 </head>
 <body>
