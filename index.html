@@ -2088,12 +2088,11 @@
 function sendEmail(event) {
     event.preventDefault();
     const name = document.getElementById('senderName').value;
-    const email = document.getElementById('senderEmail').value;
     const subject = document.getElementById('subject').value || 'Message from Portfolio';
     const message = document.getElementById('message').value;
 
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&to=amar.sigireddi@edu.escp.eu&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const body = `${message}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&to=amar.sigireddi@edu.escp.eu&su=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent(body)}`;
     
     window.open(gmailUrl, '_blank');
 }
